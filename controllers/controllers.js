@@ -1,5 +1,5 @@
 const bcrypt = require('bcryptjs');
-const UserModel = require('../models/models');
+const {UserModel} = require('../models/models');
 
 async function createUser(req, res) {
     const { name, email, password, motive, domain, days, wantToDo } = req.body;
@@ -33,6 +33,7 @@ async function createUser(req, res) {
         console.error('Error creating user', error);
         res.status(500).json({ message: 'Internal server error' });
     }
+
 }
 
 module.exports = {createUser}

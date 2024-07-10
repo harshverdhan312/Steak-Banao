@@ -1,17 +1,19 @@
 const express = require('express');
-const mongoose = require('mongoose');
-
+const {dayShow}=require("./routes/days.routes")
 require('dotenv').config();
-const userRoute = require('./routes/routes')
-const {connectDB} = require("./config/dbConnect");
+const {userRoute} = require('./routes/routes')
+const {connectToMongoDB} = require("./config/dbConnect");
 
 const app = express();
 
-connectDB()
+connectToMongoDB("mongodb://127.0.0.1:27017/streaks")
+    .then(()=>console.log("mongodb connected"))
+    .catch(err => console.log(err));
 
 port = process.env.PORT || 3000;
 
-app.use('/api/users',userRoute)
+app.use(userRoute)
+app.use(dayShow)
 
 
 app.listen(port,()=>{
