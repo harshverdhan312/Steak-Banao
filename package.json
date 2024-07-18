@@ -8,7 +8,7 @@
   "keywords": [],
   "author": "Harsh Verdhan Singh",
   "license": "ISC",
-  "description": "",
+  "description": "This is a backend project to calculate and track streaks in challenges,",
   "dependencies": {
     "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
