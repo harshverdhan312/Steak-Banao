@@ -1,11 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Error</title>
+    <title>Hello</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-<h1><%= message %></h1>
+
+<body class="h-screen bg-zinc-950 overflow-auto text-zinc-50">
+    <nav class="bg-gradient-to-b from-zinc-700 to-zinc-900 flex justify-between py-2 px-10">
+    <a href="/login">
+        <h1 class="text-3xl font-semibold">Log-In</h1>
+    </a>
+    <h1 class="text-5xl font-semibold">Hi Hustler</h1>
+    <a href="/signup">
+        <h1 class="text-3xl font-semibold">Sign-Up</h1>
+    </a>
+</nav>
+
+<div class="flex justify-center">
+    <h1 class="text-6xl pt-10">&#128293;</h1>
+    <h1 class="text-6xl pt-10 px-7 py-1">Streak Banao</h1>
+    <h1 class="text-6xl pt-10">&#128293;</h1>
+</div>
+
+<div class="flex justify-center items-center px-5 space-x-8">
+    <div class="flex-1">
+        <p class="text-3xl font-semibold mb-4">
+            "Fulfil your desire. Ignite the fire.
+        </p>
+        <p class="text-3xl font-semibold mb-4">
+            Bat through the tough times.
+            Sometimes it’s 263, sometimes 49.
+        </p>
+        <p class="text-3xl font-semibold mb-4">
+            Life can put you in a pickle, laugh through like it’s a tickle.
+        </p>
+        <p class="text-3xl font-semibold mb-4">
+            Whether you get a 100 or a duck, life goes on and don’t get stuck.
+        </p>
+        <p class="text-3xl font-semibold mb-4">
+            There is no map, ride the tide. You are your own guide."
+        </p>
+        <p class="text-3xl font-semibold">
+            🖊️Virat Kohli
+        </p>
+    </div>
+    <div class="flex-shrink-0">
+        <img src="images/giphy.webp" alt="My GIF" class="w-100 h-100 mx-auto">
+    </div>
+</div>
+
 </body>
+
 </html>
