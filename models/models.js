@@ -2,6 +2,10 @@ const mongoose = require('mongoose');
 const bcrypt = require ("bcryptjs")
 const {Schema} = require("mongoose")
 
+var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+let date = new Date();
+
 const userSchema = new Schema({
     name:{
         type:String,
@@ -32,8 +36,9 @@ const userSchema = new Schema({
     date:{
         type:Date,
         required:true,
-       default:Date.now()
-    }
+        default: () => new Date().toLocaleDateString("en-US", options),
+    },
+    streakCounter: { type: Number, default: 65 }
 },{timestamps: true})
 
 userSchema.pre('save', async function (next) {
