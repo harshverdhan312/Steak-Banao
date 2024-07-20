@@ -7,9 +7,11 @@ const { ejs } = require('ejs');
 const { log } = require('node:console');
 const session = require('express-session');
 const cron = require('node-cron');
+require('dotenv').config();
 const {UserModel} = require("./models/models");
 const app = express();
 
+const port = process.env.PORT || 5500
 const updateStreaks = async () => {
     const users = await UserModel.find();
     const currentDate = new Date();
@@ -33,7 +35,7 @@ cron.schedule('0 0 * * *', () => {
 
 var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
 
-mongoose.connect('mongodb://localhost:27018/streakbanao')
+mongoose.connect(process.env.MONGO_URL)
 
 let date = new Date();
 
@@ -153,6 +155,6 @@ app.get("/main", async(req, res) => {
 
 
 
-app.listen(5500,()=>{
-    console.log("Server running at: http://127.0.0.1:5500");
+app.listen(port,()=>{
+    console.log(`Server running at: http://127.0.0.1:${port}`);
 })
