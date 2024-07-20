@@ -38,7 +38,7 @@ const userSchema = new Schema({
         required:true,
         default: () => new Date().toLocaleDateString("en-US", options),
     },
-    streakCounter: { type: Number, default: 65 }
+    streakCounter: { type: Number, default: 0 }
 },{timestamps: true})
 
 userSchema.pre('save', async function (next) {
