@@ -49,7 +49,7 @@ app.set('views', join(__dirname, 'views'));
 app.use(express.static('public'));
 
 app.use(session({
-    secret: '123',
+    secret: process.env.SESSION_SECRET,
     resave: false,
     saveUninitialized: true,
     cookie: { secure: false } // Set to true if using HTTPS
@@ -105,7 +105,7 @@ app.post('/check', async (req, res) => {
         return res.status(400).redirect('/');
       }
  
-      const token = jwt.sign({ id: user._id }, '123', { expiresIn: '1h' });
+      const token = jwt.sign({ id: user._id }, process.env.JWT_SECRET, { expiresIn: '1h' });
       req.session.data = {
         name: user.name,
         email: user.email,
