@@ -9,29 +9,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="h-screen bg-zinc-950 overflow-auto text-zinc-50">
-    <nav class="bg-gradient-to-b from-zinc-700 to-zinc-900 flex justify-between py-2 px-10">
-        <h1 class="text-3xl font-semibold">&#128293;x<%= days %></h1>
-        <h1 class="text-5xl font-semibold">Hi <%= name %></h1>
-        <a href="/">
-            <h1 class="text-3xl font-semibold">Logout</h1>
-        </a>
+    <nav class="bg-gradient-to-b from-zinc-700 to-zinc-900 flex justify-between py-4 px-6 sm:px-10">
+        <h1 class="text-xl sm:text-3xl font-semibold">&#128293;x<%= days %></h1>
+        <h1 class="text-3xl sm:text-5xl font-semibold">Hi <%= name %></h1>
+        <a href="/" class="text-xl sm:text-3xl font-semibold hover:text-zinc-300 transition">Logout</a>
     </nav>
     
     <div class="flex justify-center mt-10">
-        <h1 class="text-4xl">&#128293;</h1>
-        <h1 class="text-4xl px-5">Streak Banao</h1>
-        <h1 class="text-4xl">&#128293;</h1>
+        <h1 class="text-4xl sm:text-6xl">&#128293;</h1>
+        <h1 class="text-4xl sm:text-6xl px-2 sm:px-5">Streak Banao</h1>
+        <h1 class="text-4xl sm:text-6xl">&#128293;</h1>
     </div>
 
-    <div class="flex-grow flex justify-center items-start p-2 space-x-4 w-full overflow-hidden">
-        <div class="w-6/12 p-5">
-            <h1 class="text-4xl pt-10">Hi, <%= name %> 👋</h1>
-            <p class="text-3xl pt-10">
+    <div class="flex flex-col sm:flex-row justify-center items-start p-4 space-y-4 sm:space-y-0 sm:space-x-4 w-full overflow-hidden">
+        <div class="w-full sm:w-6/12 p-5">
+            <h1 class="text-2xl sm:text-4xl pt-10">Hi, <%= name %> 👋</h1>
+            <p class="text-xl sm:text-3xl pt-10">
                 It's amazing how you are going <%= days %> days 🔥 strong in your <%= totaldays %> days <%= domain %> 🔥 streak.
                 Your amazing streak is a testament to your hard work in achieving your dream of <%= motive %>.
             </p>
-            <p class="text-3xl pt-10">Keep Dreaming, Keep Hustling, Keep Achieving</p>
-        </div>
+            <p class="text-xl sm:text-3xl pt-10">Keep Dreaming, Keep Hustling, Keep Achieving</p>
         </div>
     </div>
 </body>

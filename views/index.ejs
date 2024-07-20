@@ -9,50 +9,44 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="h-screen bg-zinc-950 overflow-auto text-zinc-50">
-    <nav class="bg-gradient-to-b from-zinc-700 to-zinc-900 flex justify-between py-2 px-10">
-    <a href="/login">
-        <h1 class="text-3xl font-semibold">Log-In</h1>
-    </a>
-    <h1 class="text-5xl font-semibold">Hi Hustler</h1>
-    <a href="/signup">
-        <h1 class="text-3xl font-semibold">Sign-Up</h1>
-    </a>
-</nav>
+<body class="h-screen bg-zinc-950 text-zinc-50 overflow-auto">
+    <nav class="bg-gradient-to-b from-zinc-700 to-zinc-900 flex justify-between py-4 px-6 sm:px-10">
+        <a href="/login" class="text-xl sm:text-3xl font-semibold hover:text-zinc-300 transition">Log-In</a>
+        <h1 class="text-3xl sm:text-5xl font-semibold">Hi Hustler</h1>
+        <a href="/signup" class="text-xl sm:text-3xl font-semibold hover:text-zinc-300 transition">Sign-Up</a>
+    </nav>
 
-<div class="flex justify-center">
-    <h1 class="text-6xl pt-10">&#128293;</h1>
-    <h1 class="text-6xl pt-10 px-7 py-1">Streak Banao</h1>
-    <h1 class="text-6xl pt-10">&#128293;</h1>
-</div>
-
-<div class="flex justify-center items-center px-5 space-x-8">
-    <div class="flex-1">
-        <p class="text-3xl font-semibold mb-4">
-            "Fulfil your desire. Ignite the fire.
-        </p>
-        <p class="text-3xl font-semibold mb-4">
-            Bat through the tough times.
-            Sometimes it’s 263, sometimes 49.
-        </p>
-        <p class="text-3xl font-semibold mb-4">
-            Life can put you in a pickle, laugh through like it’s a tickle.
-        </p>
-        <p class="text-3xl font-semibold mb-4">
-            Whether you get a 100 or a duck, life goes on and don’t get stuck.
-        </p>
-        <p class="text-3xl font-semibold mb-4">
-            There is no map, ride the tide. You are your own guide."
-        </p>
-        <p class="text-3xl font-semibold">
-            🖊️Virat Kohli
-        </p>
+    <div class="flex justify-center items-center space-x-2 sm:space-x-4 pt-10">
+        <h1 class="text-4xl sm:text-6xl">&#128293;</h1>
+        <h1 class="text-4xl sm:text-6xl px-2 sm:px-4">Streak Banao</h1>
+        <h1 class="text-4xl sm:text-6xl">&#128293;</h1>
     </div>
-    <div class="flex-shrink-0">
-        <img src="images/giphy.webp" alt="My GIF" class="w-100 h-100 mx-auto">
-    </div>
-</div>
 
+    <div class="flex flex-col md:flex-row justify-center items-center px-5 space-y-8 md:space-y-0 md:space-x-8 pt-10">
+        <div class="flex-1 text-center md:text-left">
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">
+                "Fulfil your desire. Ignite the fire.
+            </p>
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">
+                Bat through the tough times. Sometimes it’s 263, sometimes 49.
+            </p>
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">
+                Life can put you in a pickle, laugh through like it’s a tickle.
+            </p>
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">
+                Whether you get a 100 or a duck, life goes on and don’t get stuck.
+            </p>
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold mb-4">
+                There is no map, ride the tide. You are your own guide."
+            </p>
+            <p class="text-xl sm:text-2xl md:text-3xl font-semibold">
+                🖊️Virat Kohli
+            </p>
+        </div>
+        <div class="flex-shrink-0">
+            <img src="images/giphy.webp" alt="Motivational GIF" class="w-40 h-40 sm:w-60 sm:h-60 md:w-80 md:h-80 object-cover mx-auto">
+        </div>
+    </div>
 </body>
 
 </html>

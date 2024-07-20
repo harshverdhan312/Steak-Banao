@@ -7,58 +7,57 @@
     <link rel="stylesheet" href="/stylesheets/styles.css">
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="h-screen bg-zinc-950 overflow-auto text-zinc-50" >
-<nav class="bg-gradient-to-b from-zinc-700 to-zinc-900 flex justify-between py-2 px-10">
-    <a href="/"><h1 class="text-3xl font-semibold">Home</h1></a>
-    <h1 class="text-5xl font-semibold">Hi Hustler</h1>
-    <a href="/login"><h1 class="text-3xl font-semibold">Log-In</h1></a>
-</nav>
+<body class="h-screen bg-zinc-950 text-zinc-50 overflow-auto">
+    <nav class="bg-gradient-to-b from-zinc-700 to-zinc-900 flex justify-between py-4 px-6 sm:px-10">
+        <a href="/" class="text-xl sm:text-3xl font-semibold hover:text-zinc-300 transition">Home</a>
+        <h1 class="text-3xl sm:text-5xl font-semibold">Hi Hustler</h1>
+        <a href="/login" class="text-xl sm:text-3xl font-semibold hover:text-zinc-300 transition">Log-In</a>
+    </nav>
 
-<div class="flex justify-center">
-    <h1 class="text-6xl pt-10">&#128293;</h1>
-    <h1 class="text-6xl pt-10 px-7 py-1">Streak Banao</h1>
-    <h1 class="text-6xl pt-10">&#128293;</h1>
-</div>
+    <div class="flex justify-center items-center space-x-2 sm:space-x-4 pt-10">
+        <h1 class="text-4xl sm:text-6xl">&#128293;</h1>
+        <h1 class="text-4xl sm:text-6xl px-2 sm:px-4">Streak Banao</h1>
+        <h1 class="text-4xl sm:text-6xl">&#128293;</h1>
+    </div>
 
-<div class="flex justify-center mt-10">
-    <form class="w-full max-w-lg bg-zinc-500 p-8 rounded-lg shadow-lg" action="/createuser" method="post">
-        <div class="mb-4">
-            <label class="block text-gray-900 text-sm font-bold mb-2" for="name">Name</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="name" type="text" placeholder="Enter your name">
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-900 text-sm font-bold mb-2" for="email">Email</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email" type="email" placeholder="Enter your email">
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-900 text-sm font-bold mb-2" for="password">Password</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="password" type="password" placeholder="Enter your password">
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-900 text-sm font-bold mb-2" for="motive">Motive</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="motive" type="text" placeholder="Enter your motive">
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-900 text-sm font-bold mb-2" for="domain">Domain</label>
-            <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="domain" >
-                <option value="none">Choose</option>
-                <option value="coding">Coding</option>
-                <option value="designing">Designing</option>
-                <option value="video-editing">Video Editing</option>
-                <option value="hitting gym">Hittng Gym</option>
-            </select>
-        </div>
-        <div class="mb-4">
-            <label class="block text-gray-900 text-sm font-bold mb-2" for="days">Days</label>
-            <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="days" type="number" placeholder="Enter number of days">
-        </div>
-        <div class="flex items-center justify-between">
-            <a href="/main"><button class="bg-zinc-200 hover:bg-zinc-300 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
-                Submit
-            </button>
-        </a>
-        </div>
-    </form>
-</div>
+    <div class="flex justify-center mt-10">
+        <form class="w-full max-w-lg bg-zinc-500 p-8 rounded-lg shadow-lg" action="/createuser" method="post">
+            <div class="mb-4">
+                <label class="block text-gray-900 text-sm font-bold mb-2" for="name">Name</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="name" type="text" placeholder="Enter your name">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-900 text-sm font-bold mb-2" for="email">Email</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="email" type="email" placeholder="Enter your email">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-900 text-sm font-bold mb-2" for="password">Password</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="password" type="password" placeholder="Enter your password">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-900 text-sm font-bold mb-2" for="motive">Motive</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="motive" type="text" placeholder="Enter your motive">
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-900 text-sm font-bold mb-2" for="domain">Domain</label>
+                <select class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="domain">
+                    <option value="none">Choose</option>
+                    <option value="coding">Coding</option>
+                    <option value="designing">Designing</option>
+                    <option value="video-editing">Video Editing</option>
+                    <option value="hitting-gym">Hitting Gym</option>
+                </select>
+            </div>
+            <div class="mb-4">
+                <label class="block text-gray-900 text-sm font-bold mb-2" for="days">Days</label>
+                <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" name="days" type="number" placeholder="Enter number of days">
+            </div>
+            <div class="flex items-center justify-between">
+                <button class="bg-zinc-200 hover:bg-zinc-300 text-black font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+                    Submit
+                </button>
+            </div>
+        </form>
+    </div>
 </body>
 </html>
