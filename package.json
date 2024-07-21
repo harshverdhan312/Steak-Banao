@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "main": "app.js",
   "scripts": {
-    "build":"node app.js",
-    "start": "nodemon app.js"
+    "build": "echo 'Nothing to build'",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "Harsh Verdhan Singh",
   "license": "ISC",
-  "description": "This is a backend project to calculate and track streaks in challenges,",
+  "description": "This is a backend project to calculate and track streaks in challenges.",
   "dependencies": {
-    "bcrypt": "^5.1.1",
     "bcryptjs": "^2.4.3",
+    "cookie-session": "^2.1.0",
     "dotenv": "^16.4.5",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
