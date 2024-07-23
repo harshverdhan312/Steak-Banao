@@ -4,44 +4,15 @@ const { join } = require("path");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const session = require("cookie-session");
-const cron = require("node-cron");
 require("dotenv").config();
 const { UserModel } = require("./models/models");
 const app = express();
 
 const port = process.env.PORT || 5500;
 
-const updateStreaks = async () => {
-  try {
-    const users = await UserModel.find();
-    const currentDate = new Date();
-
-    const updatePromises = users.map(async (user) => {
-      const registrationDate = new Date(user.registrationDate);
-      const timeDiff = currentDate - registrationDate;
-      const daysDiff = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
-
-      // Update streak counter
-      return UserModel.updateOne(
-        { _id: user._id },
-        { streakCounter: daysDiff }
-      );
-    });
-
-    await Promise.all(updatePromises);
-  } catch (error) {
-    console.error("Error updating streaks:", error);
-  }
-};
-
-cron.schedule("0 0 * * *", () => {
-  console.log("Running streak update task...");
-  updateStreaks();
-});
-
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.set("view engine", "ejs");
+app.set("view engine", "ejs");updateStreaks
 app.set("views", join(__dirname, "views"));
 app.use(express.static(join(__dirname, "public")));
 

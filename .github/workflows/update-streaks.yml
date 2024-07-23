@@ -1,0 +1,13 @@
+name: Trigger Update Streaks
+
+on:
+  schedule:
+    # Runs at 00:00 UTC every day
+    - cron: "0 0 * * *"
+
+jobs:
+  trigger:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call Update Streaks Function
+        run: curl -X GET https://steak-banao.vercel.app/api/updateStreaks
