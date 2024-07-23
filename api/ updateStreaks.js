@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const { UserModel } = require('../../models/models');
 require('dotenv').config();
 
-module.exports = async (req, res) => {
+const updateStreaks = async (req, res) => {
     try {
         // Ensure you only connect once
         if (mongoose.connection.readyState === 0) {
@@ -31,3 +31,5 @@ module.exports = async (req, res) => {
         mongoose.connection.close(); // Close the connection after operations
     }
 };
+
+module.exports =updateStreaks;

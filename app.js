@@ -12,7 +12,7 @@ const port = process.env.PORT || 5500;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.set("view engine", "ejs");updateStreaks
+app.set("view engine", "ejs");
 app.set("views", join(__dirname, "views"));
 app.use(express.static(join(__dirname, "public")));
 
@@ -40,6 +40,10 @@ app.get("/login", (req, res) => {
 });
 
 app.post("/createuser", async (req, res) => {
+  if (!req.body) {
+    return res.redirect("/signup");
+  }
+  
   try {
     const { name, email, password, motive, domain, days } = req.body;
 
@@ -64,7 +68,7 @@ app.post("/createuser", async (req, res) => {
       return res.status(400).redirect("/signup?error=email-taken");
     }
     console.error("Error registering user:", error);
-    res.status(500).send("Error registering user: " + error.message);
+    res.status(500).redirect("/signup?error=error")
   }
 });
 
