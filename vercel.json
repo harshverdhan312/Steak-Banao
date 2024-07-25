@@ -4,6 +4,10 @@
     {
       "src": "app.js",
       "use": "@vercel/node"
+    },
+    {
+      "src": "api/updateStreaks.js",
+      "use": "@vercel/node"
     }
   ],
   "routes": [
